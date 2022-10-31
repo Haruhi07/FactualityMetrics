@@ -30,10 +30,10 @@ class Marker():
         print("************* creat data file for factcc *************")
         write_jsonl(factcc, "tmp/data-dev.jsonl")
 
-        code_dir = pathlib.Path('/home/hs20307/Code/FactualityMetrics/resources/factcc/modeling/')
-        data_dir = pathlib.Path('/home/hs20307/Code/FactualityMetrics/tmp/')
-        ckpt_dir = pathlib.Path('/home/hs20307/Code/FactualityMetrics/resources/factcc-checkpoint/')
-        fact_score_dir = pathlib.Path('/home/hs20307/Code/FactualityMetrics/tmp/fact_score.pkl')
+        code_dir = pathlib.Path('resources/factcc/modeling/')
+        data_dir = pathlib.Path('tmp/')
+        ckpt_dir = pathlib.Path('resources/factcc-checkpoint/')
+        fact_score_dir = pathlib.Path('tmp/fact_score.pkl')
 
         task_name = 'factcc_annotated'
         model_name = 'bert-base-uncased'
