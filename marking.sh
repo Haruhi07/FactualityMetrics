@@ -11,4 +11,4 @@ cd "${SLURM_SUBMIT_DIR}"
 
 module load lang/python/anaconda/3.10.4-2021-11-fencis
 source venv/bin/activate
-python -u marker.py --summary results/epoch_0/predictions.json --reference results/references.json --source results/source.json --rouge --factcc
+python3 -u marker.py --summary results/epoch_0/predictions.json --reference results/references.json --source results/source.json --rouge --factcc
