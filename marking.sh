@@ -5,7 +5,7 @@
 #SBATCH --partition gpu_short
 #SBATCH --job-name=eval_0
 #SBATCH --time=6:0:0
-#SBATCH --mem=16384M
+#SBATCH --mem=8000M
 
 cd "${SLURM_SUBMIT_DIR}"
 
