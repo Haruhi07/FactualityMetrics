@@ -276,7 +276,7 @@ def evaluate(args, model, tokenizer, prefix=""):
         with open(args.fact_score_dir, "wb") as f:
             pickle.dump(fact_score.item(), f)
         with open('tmp/probs.txt','w') as f:
-            f.write(str(preds_prob))
+            f.write(str(preds_prob.detach().cpu().numpy().tolist()))
 
     return results
 
