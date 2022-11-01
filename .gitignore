@@ -1,2 +1,4 @@
 __pycache__/
 venv/
+resources/cnndm
+resources/factcc-checkpoint
