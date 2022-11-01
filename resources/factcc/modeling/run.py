@@ -257,7 +257,6 @@ def evaluate(args, model, tokenizer, prefix=""):
             else:
                 preds = np.append(preds, logits.detach().cpu().numpy(), axis=0)
                 out_label_ids = np.append(out_label_ids, inputs['labels'].detach().cpu().numpy(), axis=0)
-            break
 
         preds_tensor = torch.tensor(preds)
         preds_prob = F.softmax(preds_tensor, dim=1)
