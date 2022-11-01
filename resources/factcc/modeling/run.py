@@ -274,6 +274,8 @@ def evaluate(args, model, tokenizer, prefix=""):
                 logger.info("  %s = %s", key, str(result[key]))
                 writer.write("%s = %s\n" % (key, str(result[key])))
         with open(args.fact_score_dir, "w") as f:
+            pickle.dump(fact_score.item(), f)
+        with open('tmp/probs.txt') as f:
             f.write(preds_prob)
 
     return results
