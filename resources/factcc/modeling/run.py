@@ -257,6 +257,7 @@ def evaluate(args, model, tokenizer, prefix=""):
             else:
                 preds = np.append(preds, logits.detach().cpu().numpy(), axis=0)
                 out_label_ids = np.append(out_label_ids, inputs['labels'].detach().cpu().numpy(), axis=0)
+            break
 
         preds_tensor = torch.tensor(preds)
         preds_prob = F.softmax(preds_tensor, dim=1)
@@ -276,7 +277,7 @@ def evaluate(args, model, tokenizer, prefix=""):
         with open(args.fact_score_dir, "wb") as f:
             pickle.dump(fact_score.item(), f)
         with open('tmp/probs.txt','w') as f:
-            f.write(preds_prob)
+            f.write(str(preds_prob))
 
     return results
 
