@@ -26,7 +26,7 @@ class Marker():
     def factCC(self):
         factcc = self.df.loc[:, ['source', 'summary']]
         factcc.rename(columns={'source': 'text', 'summary': 'claim'}, inplace=True)
-        factcc.insert(0, 'label', 'CORRECT')
+        factcc.insert(0, 'label', 'INCORRECT')
         print("************* creat data file for factcc *************")
         write_jsonl(factcc, "tmp/data-dev.jsonl")
 
